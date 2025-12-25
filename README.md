@@ -24,7 +24,12 @@ Es ist **mein eigener Cyber-Wächter**, der rund um die Uhr über mein Gerät wa
 - **GitHub-basiert** – alles open, erweiterbar, automatisch aktualisiert
 
 ### Architektur
-Samsung A55 (Android 16) └── Termux └── IrsanAI Watchdog (bash) └── zieht täglich → dieses Repo (GitHub) └── threats.txt + android_malware.json + yara_rules/ └── erkennt RATs, Banker, Miner, Spyware
+Samsung A55 (Android 16) 
+└── Termux 
+└── IrsanAI Watchdog (bash) 
+└── zieht täglich → dieses Repo (GitHub) 
+└── threats.txt + android_malware.json + yara_rules/ 
+└── erkennt RATs, Banker, Miner, Spyware
 
 ### Für wen?
 
