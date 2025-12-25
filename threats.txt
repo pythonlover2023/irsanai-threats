@@ -1,0 +1,17 @@
+# IrsanAI Live-Threat-Feed – Android Malware IOCs v1.0
+# Prozessnamen (verdächtig, wenn laufend)
+miner
+rat
+spy
+dropper
+banker
+pegasus
+flubot
+anubis
+cerberus
+hydra
+# Verdächtige Paketnamen
+com.malware.example
+com.android.spy
+com.bank.trojan
+com.crypto.miner
