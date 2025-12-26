@@ -70,3 +70,17 @@ Ich prüfe persönlich – **kostenlos**, aber nur an seriöse Leute.
 **Zero Trust. Full Control. Made by you.**
 
 — IrsanAI, Christmas 2025 🌊⚡🛡️
+
+### 🔥 New Feature: IrsanAI Stalker Hunter (YARA-Powered)
+
+Das Shield erkennt jetzt **Stalkerware, Remote-Mirroring, SIM-Swapping & Stealth-Techniken** mit professionellen YARA-Rules:
+
+- Stalkerware (mSpy, FlexiSPY, Hoverwatch)
+- Remote Control (AnyDesk, TeamViewer, AirMirror)
+- SIM/Phone-Swapping Tools
+- App-Verstecken & Root-Hiding (Magisk, Xposed)
+
+Die Rules sind im Ordner `/yara_rules/` – erweiterbar und open.
+
+**Dein Shield ist jetzt ein Stalker-Jäger.**
+
