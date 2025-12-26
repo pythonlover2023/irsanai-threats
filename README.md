@@ -12,40 +12,60 @@
 
 Dieses Repo ist der **öffentliche Threat-Intelligence-Feed** meines persönlichen **IrsanAI 360 Smartphone SHIELD** – ein vollautonomes, akkuschonendes Security-System, das auf meinem Samsung Galaxy A55 (Android 16) in Termux läuft.
 
-Der **volle Code** bleibt privat – aus Sicherheitsgründen.
+Der **volle Code** bleibt privat – aus Sicherheitsgründen (API-Keys, persönliche Anpassungen).
 
-Aber: **Du kannst dein eigenes SHIELD nachbauen** – mit diesem Feed als Basis.
+**Aber:** Du kannst dein eigenes SHIELD nachbauen – mit diesem Feed als Basis.
 
-### Features (aktuell & kommend)
+### Ehrlichkeit vorab: Was ist möglich auf Android 16 (ohne Root)?
 
-- Matrix-Dashboard (GPS-Smoothing, Akku, Netzwerk, Prozesse)
-- Autonomer Watchdog (Prozesse, Battery-Drain, Live-Threat-Check)
-- Smart Alerts mit detaillierter Ursache & Handlungsempfehlung
-- Forensik-Collection (One-Tap ZIP)
-- VirusTotal-Integration (optional)
-- Kommend: Netzwerk-Scanner, YARA-Rules, Battery-Profiler
+Google hat seit Android 14+ den Zugriff auf installierte Apps massiv eingeschränkt – aus gutem Grund (Datenschutz).
 
-### Starter Kit – So baust du dein eigenes SHIELD
+**Was wir erreichen können (sauber & legal):**
+- Live-Threat-Feed gegen Prozessnamen
+- Battery-Drain-Erkennung
+- GPS, Akku, Netzwerk, Prozesse im Dashboard
+- Scan von **manuell heruntergeladenen APKs** (Downloads-Ordner)
+- Forensik-Collection (Logs, Screenshots, Sensoren)
+
+**Was nicht möglich ist (ohne Root):**
+- Automatischer Hash-Scan aller installierten Apps (Google blockt APK-Pfade)
+
+Das ist **kein Bug** – das ist **maximale Sicherheit durch sauberen Code** innerhalb der Google-Policies.
+
+### Features (aktuell live)
+
+- **Matrix-Dashboard** – live GPS (Smoothing), Akku, Netzwerk, Prozesse, Security-Status
+- **Autonomer Watchdog** – prüft alle 45 Min Prozesse & Battery-Drain gegen Feed
+- **Smart Alerts** – detaillierte Notification mit Ursache & Handlungsempfehlung
+- **Forensik-Collection** – One-Tap ZIP mit allen Daten
+- **VirusTotal-Integration** – Scan von Downloads-APKs (stealthy, resume-fähig)
+- **Battery-Profiler** – lernt Normalverbrauch, warnt bei Abweichungen
+
+### Kommend (bald)
+
+- **Netzwerk-Scanner** (nmap-basiert)
+- **YARA-Rules** für lokale Signatur-Erkennung
+- **Watchdog als Manager** – automatische, intelligente Scans (VT, Battery, Threat-Feed)
+
+### Architektur
+Samsung A55 (Android 16) └── Termux └── IrsanAI Watchdog (Manager) ├── Dashboard ├── Battery-Profiler ├── VT-Scanner (Downloads) └── zieht täglich → dieses Repo └── threats.txt + android_malware.json + yara_rules/
+### 🚀 Starter Kit – So baust du dein eigenes SHIELD
 
 1. Termux aus F-Droid installieren
 2. `pkg install termux-api git curl jq bc`
 3. Dieses Repo klonen
 4. Projektordner anlegen
 
-### Willst du den vollen Code (dashboard.sh, irsan-watchdog.sh etc.)?
+### Willst du den vollen Code?
 
 Der Code ist **privat**.
 
 **So bekommst du ihn:**
-
 - Öffne ein **Issue** in diesem Repo
 - Titel: „Request for IrsanAI SHIELD Code“
-- Beschreibe:
-  - Warum du das SHIELD willst
-  - Was du damit vorhast
-  - Deine E-Mail
+- Beschreibe kurz dein Vorhaben & gib deine E-Mail an
 
-Ich prüfe persönlich und schicke dir die Skripte – **kostenlos**, aber nur an seriöse Leute.
+Ich prüfe persönlich – **kostenlos**, aber nur an seriöse Leute.
 
 **Zero Trust. Full Control. Made by you.**
 
