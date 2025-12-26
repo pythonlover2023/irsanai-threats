@@ -70,6 +70,12 @@ Diese Hürden zeigen: **echte mobile Security ist kein Plug-and-Play** – aber 
 4. Projektordner anlegen
 5. VirusTotal Key (optional) in `~/.irsan_vt_key`
 
+
+### 🗺️ Roadmap – Wohin geht die Reise?
+
+Siehe [ROADMAP.md](ROADMAP.md) für die geplante Zukunft des SHIELD – von Netzwerk-Forensik bis zu IrsanAI StalkerNet (ML-basiert).
+
+Wir bauen Schritt für Schritt – immer legal, akkuschonend und mit Zero-Trust.
 ### Willst du den vollen Code?
 
 Der Code ist **privat**.
