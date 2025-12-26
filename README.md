@@ -12,70 +12,41 @@
 
 Dieses Repo ist der **öffentliche Threat-Intelligence-Feed** meines persönlichen **IrsanAI 360 Smartphone SHIELD** – ein vollautonomes, akkuschonendes Security-System, das auf meinem Samsung Galaxy A55 (Android 16) in Termux läuft.
 
-Der **volle Code** (Dashboard, Watchdog, Collect) bleibt privat – aus Sicherheitsgründen (API-Keys, persönliche Anpassungen).
+Der **volle Code** bleibt privat – aus Sicherheitsgründen.
 
 Aber: **Du kannst dein eigenes SHIELD nachbauen** – mit diesem Feed als Basis.
 
-### Features des SHIELD (was du bekommst)
+### Features (aktuell & kommend)
 
-### Architektur
-Samsung A55 (Android 16) 
-└── Termux 
-└── IrsanAI Watchdog (bash) 
-└── zieht täglich → dieses Repo (GitHub) 
-└── threats.txt + android_malware.json + yara_rules/ 
-└── erkennt RATs, Banker, Miner, Spyware
-- Live-Threat-Feed (täglich aktualisierbar)
-- Autonomer Watchdog (Prozesse & Battery-Drain)
-- Smart Alerts (Notification + Vibration)
-- GPS-Smoothing Dashboard
-- VirusTotal-Integration (mit deinem eigenen Key)
-- Zero-Trust-Ansatz
-(🎄 Finale Starter-Kit-Anleitung – jeder kann jetzt sein eigenes SHIELD bauen)
+- Matrix-Dashboard (GPS-Smoothing, Akku, Netzwerk, Prozesse)
+- Autonomer Watchdog (Prozesse, Battery-Drain, Live-Threat-Check)
+- Smart Alerts mit detaillierter Ursache & Handlungsempfehlung
+- Forensik-Collection (One-Tap ZIP)
+- VirusTotal-Integration (optional)
+- Kommend: Netzwerk-Scanner, YARA-Rules, Battery-Profiler
 
-### 🚀 Starter Kit – So baust du dein eigenes IrsanAI SHIELD
+### Starter Kit – So baust du dein eigenes SHIELD
 
-1. **Termux installieren** (aus F-Droid – sicherer)
-   https://f-droid.org/packages/
-   com.termux/
-
-2. **Termux öffnen & Pakete installieren**
-   ```bash
-   pkg update && pkg upgrade
-   pkg install termux-api git curl jq bc
-3. Dieses Threat-Repo klonen
-   git clone https://github.com/
-   pythonlover2023/irsanai-threats.git ~/ 
-   irsanai-threats
+1. Termux aus F-Droid installieren
+2. `pkg install termux-api git curl jq bc`
+3. Dieses Repo klonen
 4. Projektordner anlegen
-   mkdir -p ~/mobile_forensic
-   cd ~/mobile_forensic
-5. Dashboard, Watchdog & Collect anlegen    (Kopiere die Skripte aus der privaten.  
-   Anleitung – siehe unten)
-6. VirusTotal API-Key (optional, aber    
-    empfohlen)
-   - Kostenlosen Account bei https://  
-   virustotal.com erstellen
 
-   - Key speichern:
-   echo "DEIN_VIRUSTOTAL_API_KEY" >    
-   ~/.irsan_vt_key
-   chmod 600 ~/.irsan_vt_key
+### Willst du den vollen Code (dashboard.sh, irsan-watchdog.sh etc.)?
 
-7. Watchdog starten
-   ~/mobile_forensic/irsan-watchdog.sh &
+Der Code ist **privat**.
 
-8. Dashboard starten
+**So bekommst du ihn:**
 
-   alias irsan='~/mobile_forensic/
-   dashboard.sh'
-   irsan
+- Öffne ein **Issue** in diesem Repo
+- Titel: „Request for IrsanAI SHIELD Code“
+- Beschreibe:
+  - Warum du das SHIELD willst
+  - Was du damit vorhast
+  - Deine E-Mail
 
-Fertig! Dein eigenes IrsanAI 360 SHIELD läuft.
-Woher bekomme ich die Skripte (dashboard.sh, irsan-watchdog.sh etc.)?
-Der volle Code ist privat (aus Sicherheitsgründen – API-Keys, persönliche Anpassungen).
+Ich prüfe persönlich und schicke dir die Skripte – **kostenlos**, aber nur an seriöse Leute.
 
-Schreib mir ein issue auf github.  DM auf X (@pythonlover2023) oder per Mail – ich schicke dir die aktuellen Skripte persönlich.
-Kostenlos – aber nur an Leute, die ernsthaft ihr Handy schützen wollen.
-Zero Trust. Full Control. Made by you.
+**Zero Trust. Full Control. Made by you.**
+
 — IrsanAI, Christmas 2025 🌊⚡🛡️
