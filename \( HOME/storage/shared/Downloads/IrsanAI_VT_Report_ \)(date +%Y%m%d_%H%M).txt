@@ -1,0 +1,5 @@
+IrsanAI VT-Scan – Practical Edition (Android 16)
+Datum: Fri Dec 26 10:24:55 CET 2025
+Scanne APKs in Downloads + manuell
+===========================================
+✅ termux-widget.apk → ✅ Clean termux-widget.apk (Cache)
