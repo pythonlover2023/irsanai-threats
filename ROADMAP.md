@@ -3,32 +3,37 @@
 > **"The best way to predict the future is to invent it."**  
 > — IrsanAI, Nordsee-Edition
 
-### Aktuell live (Christmas 2025)
+### Fortschritt (Stand 26.12.2025)
 
-- Matrix-Dashboard mit GPS-Smoothing
-- Autonomer Watchdog (Manager)
-- Smart Alerts mit Ursache & Empfehlung
-- Battery-Profiler
-- VirusTotal-Integration (stealthy)
-- YARA-Lite Scanner (Stalkerware, Mirroring, SIM-Swapping)
+- [x] Matrix-Dashboard mit GPS-Smoothing
+- [x] Autonomer Watchdog (Manager)
+- [x] Smart Alerts mit Ursache & Handlungsempfehlung
+- [x] Battery-Profiler (lernt Normalverbrauch)
+- [x] VirusTotal-Integration (stealthy, resume-fähig)
+- [x] YARA-Lite Scanner (Stalkerware, Mirroring, SIM-Swapping, Stealth)
+- [x] Live-Threat-Feed (GitHub-basiert)
+- [x] Forensik-Collection (One-Tap ZIP)
+- [x] Rootless Netzwerk-Monitor (Traffic-Anomalien)
+- [x] Öffentliches Threat-Repo mit YARA-Rules
+- [x] Issue-basierte Code-Anfrage (kontrolliert & sicher)
 
 ### Kurzfristig (Q1 2026)
 
-- **Netzwerk-Forensik** – stichprobenartiger Traffic-Sniff (tcpdump, nur eigenes Gerät)
-- **YARA-Erweiterung** – mehr Rules für aktuelle Android-Malware-Familien
-- **Auto-Update Action** – tägliche Threat-Feed-Aktualisierung direkt aus GitHub
+- [ ] Erweiterter Netzwerk-Scanner (bessere Traffic-Analyse ohne Root)
+- [ ] YARA-Rules Auto-Update (tägliche neue Rules aus vertrauenswürdigen Quellen)
+- [ ] Verbesserte False-Positive-Filter für YARA-Lite
 
 ### Mittelfristig (2026)
 
-- **IrsanAI StalkerNet** – minimales ML-Modell für Anomalie-Erkennung (Battery, Network, Behavior)
-- **Forensik-Archive** – verschlüsselte Langzeit-Speicherung verdächtiger Samples
-- **Zero-Interaction Mode** – komplett unsichtbarer Schutz
+- [ ] **IrsanAI StalkerNet** – minimales ML-Modell für Anomalie-Erkennung (Battery, Network, Behavior)
+- [ ] Forensik-Archive – verschlüsselte Langzeit-Speicherung verdächtiger Samples
+- [ ] Zero-Interaction Mode – komplett unsichtbarer Schutz
 
 ### Langfristig (Vision)
 
-- **Full Offline Detection** – lokale ML-Modelle ohne Internet
-- **Community-Feed** – anonymisierte IOCs von vertrauenswürdigen Usern
-- **IrsanAI Shield für alle** – einfache Installations-App (APK)
+- [ ] Full Offline Detection – lokale ML-Modelle ohne Internet
+- [ ] Community-Feed – anonymisierte IOCs von vertrauenswürdigen Usern
+- [ ] IrsanAI Shield für alle – einfache Installations-App (APK)
 
 **Stay tuned. Stay safe. Stay free.**
 
