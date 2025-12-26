@@ -10,12 +10,9 @@
 
 ### Was ist das hier?
 
-Dieses Repo ist der **öffentliche Herzschlag** meines persönlichen **IrsanAI 360 Smartphone SHIELD** – ein vollautonomes, akkuschonendes Security-System, das auf meinem Samsung Galaxy A55 (Android 16) in Termux läuft.
+Dieses Repo ist der **öffentliche Threat-Intelligence-Feed** meines persönlichen **IrsanAI 360 Smartphone SHIELD** – ein vollautonomes, akkuschonendes Security-System, das auf meinem Samsung Galaxy A55 (Android 16) in Termux läuft.
 
-Es ist **kein kommerzielles Antivirus**.  
-Es ist **mein eigener Cyber-Wächter** – mit Zero-Trust-Ansatz: **keiner App wird blind vertraut**.
-
-Der **volle Code** bleibt privat – aus Sicherheitsgründen (API-Keys, persönliche Anpassungen).
+Der **volle Code** bleibt privat – aus Sicherheitsgründen.
 
 **Aber:** Du kannst dein eigenes SHIELD nachbauen – mit diesem Feed als Basis.
 
@@ -33,25 +30,38 @@ Google schränkt seit Android 14+ den Zugriff auf installierte Apps massiv ein �
 **Was nicht möglich ist (ohne Root):**
 - Automatischer Scan aller installierten Apps
 
-Das ist **kein Bug** – das ist **maximale Sicherheit** innerhalb der Google-Policies.
-
 ### Features (aktuell live – Christmas 2025)
 
-- **Matrix-Dashboard** – live GPS (Smoothing), Akku, Netzwerk, Prozesse, Security-Status
-- **Autonomer Watchdog (Manager)** – prüft alle 45 Min Prozesse, Battery-Drain & Downloads-APKs
-- **Smart Alerts** – detaillierte Notification mit Ursache & Handlungsempfehlung
-- **Battery-Profiler** – lernt Normalverbrauch, warnt bei Abweichungen
-- **VirusTotal-Integration** – stealthy Scan von Downloads (resume-fähig)
-- **YARA-Lite Scanner** – erkennt Stalkerware, Mirroring, SIM-Swapping & Stealth-Techniken (Rules in /yara_rules/)
+- Matrix-Dashboard (live GPS, Akku, Netzwerk, Prozesse)
+- Autonomer Watchdog (Manager) – prüft alle 45 Min
+- Smart Alerts mit Ursache & Handlungsempfehlung
+- Battery-Profiler
+- VirusTotal-Integration (stealthy, resume-fähig)
+- YARA-Lite Scanner (Stalkerware, Mirroring, SIM-Swapping)
 
-### Kommend (bald live)
+### Setup-Hürden & Lösungen (der echte Kampf mit Android 16)
 
-- **Netzwerk-Scanner** (nmap-basiert)
-- **Erweiterter Threat-Feed** – JSON + tägliche Auto-Updates
-- **Erweiterte YARA-Rules** – mehr Stalkerware-Familien
+Das SHIELD läuft perfekt – aber der Weg dorthin war hart. Hier die wichtigsten Stolpersteine & Fixes (Samsung One UI / Android 16):
 
-### Architektur
-Samsung A55 (Android 16) └── Termux └── IrsanAI Watchdog (Manager) ├── Dashboard ├── Battery-Profiler ├── VT-Scanner (Downloads) ├── YARA-Lite Scanner └── zieht täglich → dieses Repo └── threats.txt + android_malware.json + yara_rules/
+1. **Termux:Widget Installation**
+   - Nicht mehr im Termux-pkg → nur als APK aus GitHub oder F-Droid
+   - Play Protect blockt oft → „Trotzdem installieren“
+   - F-Droid-Version ist die sicherste
+
+2. **Widget-Start im Hintergrund**
+   - Erfordert **„Am Anfang anzeigen“** (Samsung-Bezeichnung für "Über anderen Apps anzeigen")
+   - Pfad: Einstellungen → Apps → Termux → Erweiterte Einstellungen → Am Anfang anzeigen → EIN
+
+3. **Notification-Sound & Vibration**
+   - `--vibrate` allein reicht (kein pattern)
+   - Sound kommt automatisch (Standard-Notification-Ton)
+
+4. **Git-Push ohne Passwort-Frage**
+   - Personal Access Token (classic) mit repo-Scope
+   - `git config --global credential.helper store`
+
+Diese Hürden zeigen: **echte mobile Security ist kein Plug-and-Play** – aber machbar, wenn man dranbleibt.
+
 ### 🚀 Starter Kit – So baust du dein eigenes SHIELD
 
 1. Termux aus F-Droid installieren
